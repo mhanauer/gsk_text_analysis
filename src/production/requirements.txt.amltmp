@@ -1,0 +1,12 @@
+azureml-defaults
+pandas==1.4.1
+streamlit==1.21.0
+pulp==2.7.0
+beautifulsoup4==4.11.1
+numpy==1.23.5
+pyprojroot==0.2.0
+skimpy==0.0.8
+schedule==1.2.0
+openpyxl==3.1.2
+holidays==0.28
+requests==2.28.2

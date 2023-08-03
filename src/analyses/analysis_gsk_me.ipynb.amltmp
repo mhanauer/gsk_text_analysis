@@ -697,7 +697,7 @@
       "cell_type": "code",
       "source": [
         "data_topic = classify_and_analyze(\n",
-        "    data=data_ra, candidate_label=\"early treatment\", topic=\"management\"\n",
+        "    data=data_ra, candidate_label=\"early treatment\", topic=\"early_treatment\"\n",
         ")\n",
         "data_ra_topic = data_topic[1]\n",
         "data_topic[0]"
@@ -738,7 +738,7 @@
     {
       "cell_type": "code",
       "source": [
-        "extract_topics(data=data_ra_topic, topic=\"management\")"
+        "extract_topics(data=data_ra_topic, topic=\"early_treatment\")"
       ],
       "outputs": [],
       "execution_count": null,
