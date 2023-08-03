@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import base64
 
 def get_reviews(base_url):
     headers = {"User-Agent": "Mozilla/5.0"}
@@ -39,6 +40,6 @@ if base_url:
     df = df.dropna().reset_index(drop=True)
     st.dataframe(df)
     csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()
+    b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'<a href="data:file/csv;base64,{b64}" download="reviews.csv">Download CSV File</a>'
     st.markdown(href, unsafe_allow_html=True)
